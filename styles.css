@@ -9,6 +9,11 @@ body{
 main{
     background-color: white;
 }
+
+ul{
+    padding: 0;
+    margin: 0;
+}
 /* STYLE THE HEROIMAGE SECTION */
 #banner {
     position: relative;
