@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 15</title>
+</head>
+<body>
+    <h1>Challenge 15</h1>
+    <script>
+        var yourName = prompt("What's your name?", "ex. Bob");
+        function hello(name){
+
+            var greeting;
+
+           if (name == null || name == ""){
+            greeting = "You didn't give your name";
+           }
+           else {
+            greeting = `Hello ${name}, and welcome!`;
+           }
+
+           return greeting;
+        }
+        console.log( hello(yourName) );
+        
+        var foods = ["sushi", "candy", "fried chicken", "Pad Thai", "Juice"]
+
+        function hospitality(name, gift){
+            for(var i=0; i<gift.length; i++){
+                console.log(`${name}, would you like some ${gift[i]}?`);
+            }          
+        }
+        hospitality(yourName, foods);
+        
+
+    </script>
+</body>
+</html>
