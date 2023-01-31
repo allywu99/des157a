@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Experiment 2</h1>
+
+    <h2>Let's change the color of this page!</h2>
+
+    <script>
+        var faveColor = prompt("Out of this list of colors down below, choose your favorite!", "Red, Blue, Yellow, Green, Purple");
+        faveColor = faveColor.toLowerCase();
+
+        if (faveColor === "red"){
+            document.body.style.backgroundColor = "red";
+        }
+        else if (faveColor === "blue"){
+            document.body.style.backgroundColor = "blue";
+        }
+        else if (faveColor === "yellow"){
+            document.body.style.backgroundColor = "yellow";
+        }
+        else if (faveColor === "green"){
+            document.body.style.backgroundColor = "green";
+        }
+        else if (faveColor === "purple"){
+            document.body.style.backgroundColor = "purple";
+        }
+        else{
+            alert("You fucked up :(")
+        }
+
+    </script>
+    
+    
+</body>
+</html>
