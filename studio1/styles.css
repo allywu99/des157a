@@ -1,0 +1,91 @@
+body{
+    min-width: 900px;
+    max-width: 1200px;
+    margin: auto;
+    background: #568EA3;
+}
+
+#banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.centered h2{
+    text-align: center;
+    font-family: 'Fascinate Inline', cursive;
+    font-size: 4em;
+}
+
+.centered h1{
+    font-family: 'Rubik Vinyl', cursive;
+    font-size: 6em;
+    line-height: 0.5em;
+}
+
+#myform{
+    width: 900px;
+    margin: auto;
+    margin-top: 50px;
+    font-family: 'Itim', cursive;
+
+    font-size: 1.2em;
+    line-height: 2em;
+    color: white;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #0B4ACB;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #0C3382;
+  }
+
+  /* STYLE THE FOOTER */
+footer {
+	background: #284050;
+	padding: 20px 0;
+	text-align: center;
+	font-family: 'Itim', cursive;
+	color:#fff;
+    margin-top: 50px;
+}
+
+footer a {
+	color: #568EA3;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+footer .socials{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 50px;
+}
+  
