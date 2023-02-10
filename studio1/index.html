@@ -6,32 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Itim&family=Pacifico&family=Rubik+Vinyl&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <script src="script.js" defer></script>
     <title>Shark Tank Mad Lib</title>
 </head>
 <body>
     <main>
         <div id="banner">
-            <img src="images/muscleShark.jpg" alt="Muscly Shark" style="width:100%">
-            <div class="centered">
-                <h1>SHARK</h1>
-                <h1>TANK</h1>
-                <h2>Pitch Generator</h2>
+            <!-- <div class="centered-text"> -->
+                <img src="images/whiteLogo.png" alt = "Shark Tank White Logo" width="300" height="241">
+                <h1>Pitch Generator</h1>
+        </div>
+
+        <!-- <div>
+            <div class="line line-1">
+                <div class="wave wave1" style="background-image: url(images/1.png)"></div>
+            </div>
+
+            <div class="line line-2">
+                <div class="wave wave2" style="background-image: url(images/2.png)"></div>
+            </div>
+
+            <div class="line line-3">
+                <div class="wave wave3" style="background-image: url(images/3.png)"></div>
             </div>
         </div>
+             -->
         
+    <div id="formcss">
         <form id="myform">
-            <label for ="name">Name</label>
+            <label for ="name">Your Name</label>
             <input type = "text" id="name">
 
-            <label for ="propNoun1">Proper Noun</label>
+            <label for ="propNoun1">Name of Your Business / Company</label>
             <input type = "text" id="propNoun1">
 
-            <label for ="bigNum">Number in the 000s</label>
+            <label for ="bigNum">Amount of Investment You're Seeking ($ in the thousands)</label>
             <input type = "Number" id="bigNum">
 
-            <label for ="smallNum">Number 1-50</label>
+            <label for ="smallNum">Amount of Equity You're Seeking (% 1-50)</label>
             <input type = "Number" id="smallNum">
 
             <label for ="adj">Adjective</label>
@@ -42,17 +55,8 @@
 
             <input type = "submit" value="Let's Swim!">
         </form>
+    </div>
     </main>
-
-    <footer>
-        <h2>Who's your favorite Shark?</h2>
-        <p><br>© 2023 Allyson Wu All Rights Reserved</p>
-        <div class="socials">
-            <p><a href="mailto:&#097;&#119;&#117;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">Email</a></p>
-            <p><a href="https://www.linkedin.com/in/allysonwu/">LinkedIn</a></p>
-            <p><a href="https://www.instagram.com/allysaaaan/">Instagram</a></p>
-        </div>
-    </footer>
     
 </body>
 </html>
