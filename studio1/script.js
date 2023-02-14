@@ -14,40 +14,46 @@
     })
 
     const myForm = document.querySelector("#myForm");
-    const final = document.getElementById("#textarea");
+    const madLib = document.querySelector("#formcss");
+    // const final = document.querySelector("#textarea");
 
     myForm.addEventListener( "submit", function(event){
         event.preventDefault();
 
         const name = document.querySelector("#name").value;
-        // const hometown = document.querySelector("#hometown").value;
-        // const bigNum = document.querySelector("#bigNum").value;
-        // const smallNum = document.querySelector("#smallNum").value;
-        // const bizName = document.querySelector("bizName").value;
-        // const slogan = document.querySelector("slogan").value;
+        const hometown = document.querySelector("#hometown").value;
+        const bigNum = document.querySelector("#bigNum").value;
+        const smallNum = document.querySelector("#smallNum").value;
+        const bizName = document.querySelector("#bizName").value;
+        const slogan = document.querySelector("#slogan").value;
 
-        final.innerHTML = ("What’s up Sharks, my name is " + name);
-        // else if(hometown==""){
-        //     myText = "Please provide your hometown";
-        //     document.querySelector("#hometown").focus();
+        let myText;
+
+        // if(name){
+        //     console.log("EMPTY");
+        //     document.getElementById("#name").style.border = "red";
         // }
-        // else if(bigNum==""){
-        //     myText = "Please provide your funding amount";
-        //     document.querySelector("#bigNum").focus();
-        // }
-        // else if(smallNum==""){
-        //     myText = "Please provide your equity amount";
-        //     document.querySelector("#smallNum").focus();
-        // }
-        // else if(bizName==""){
-        //     myText = "Please provide your business' name";
-        //     document.querySelector("#bizName").focus();
-        // }
-        // else if(slogan==""){
-        //     myText = "Please provide your company's slogan";
-        //     document.querySelector("#slogan").focus();
-        // }
-        // else{
-        // }
+
+        if(name==""){
+            myText = "Please enter your name";
+            document.querySelector("#name").focus();
+            document.getElementById('name').style.border = "2px solid red";
+        }
+        else if(hometown==""){
+            myText = "Please enter your hometown";
+            document.querySelector("#hometown").focus();
+            document.getElementById('hometown').style.border = "2px solid red";
+        }
+        else if(bigNum==""){
+            myText = "Please enter your fundraising amount";
+            document.querySelector("#bigNum").focus();
+            document.getElementById('bigNum').style.border = "2px solid red";
+        }
+        else {
+            myText = `<p>Hi, my name is ${name} and I'm from ${hometown}.<br> I'm seeking ${bigNum} in exchange for ${smallNum} for my business: ${bizName}!<br> So, Sharks, if you're ready, ${slogan}!</p>`
+        }
+
+
+        madLib.innerHTML = myText;
     });
 } )();
