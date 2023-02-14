@@ -5,58 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Itim&family=Pacifico&family=Rubik+Vinyl&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;500&family=Audiowide&family=EB+Garamond&family=Inter:wght@500&family=Nunito:wght@400;600&family=Oswald:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="style.css" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <script src="./script.js" defer></script>
     <title>Shark Tank Mad Lib</title>
 </head>
 <body>
     <main>
+        
         <div id="banner">
             <!-- <div class="centered-text"> -->
-                <img src="images/whiteLogo.png" alt = "Shark Tank White Logo" width="300" height="241">
-                <h1>Pitch Generator</h1>
+                <!-- <img src="images/whiteLogo.png" alt = "Shark Tank White Logo" width="300" height="241"> -->
+                <div>
+                    <h1>SHARK <br>TANK</h1>
+                    <h1>Pitch Tester</h1>
+                </div>
+
+                <section id="buttons">
+                    <button id="playBtn">
+                        <p>Play Music</p><i class="fas fa-music"></i>
+                    </button>
+
+                    <button id="pauseBtn">
+                        <p>Pause Music</p><i class="fas fa-pause"></i>
+                    </button>
+                </section>
+                
+                <div class="judges">
+                    <h3>Who's your favorite shark?</h3>
+                    <img src="images/markCuban.png" alt="Pixel art Mark Cuban" width="100" height="100" id="1">
+                    <img src="images/kevO.png" alt="Pixel art Kevin O'Leary" width="100" height="100">
+                    <img src="images/loriG.png" alt="Pixel art Lori Greiner" width="100" height="100"> <br>
+                    <img src="images/barb.png" alt="Pixel art Barbara Corcoran" width="100" height="100">
+                    <img src="images/rob.png" alt="Pixel art Robert Herjavec" width="100" height="100">
+                    <img src="images/daymond.png" alt="Pixel art Daymond John" width="100" height="100">
+                </div>
         </div>
-
-        <div>
-            <div class="line line-1">
-                <div class="wave wave1" style="background-image: url(images/1.png)"></div>
-            </div>
-
-            <div class="line line-2">
-                <div class="wave wave2" style="background-image: url(images/2.png)"></div>
-            </div>
-
-            <div class="line line-3">
-                <div class="wave wave3" style="background-image: url(images/3.png)"></div>
-            </div>
-        </div>
-            
         
     <div id="formcss">
-        <form id="myform">
+        <h3>Ever wondered if your business wil attract the likes <br>of <span>Mark Cuban</span>, <span>Kevin O'Leary</span>, or <span>Lori Greiner?</span> <br>Test out your pitch down below to see if the sharks will bite!</h3>
+        <form>
             <label for ="name">Your Name</label>
             <input type = "text" id="name">
 
-            <label for ="propNoun1">Name of Your Business / Company</label>
-            <input type = "text" id="propNoun1">
+            <label for ="hometown">Hometown (city, state)</label>
+            <input type = "text" id="hometown">
 
             <label for ="bigNum">Amount of Investment You're Seeking ($ in the thousands)</label>
             <input type = "Number" id="bigNum">
 
-            <label for ="smallNum">Amount of Equity You're Seeking (% 1-50)</label>
+            <label for ="smallNum">Amount of Equity You're Seeking (%1 - %50)</label>
             <input type = "Number" id="smallNum">
 
-            <label for ="adj">Adjective</label>
-            <input type = "text" id="adj">
+            <label for ="propNoun1">Name of Your Business / Company</label>
+            <input type = "text" id="propNoun1">
 
-            <label for ="propNoun2">Proper Noun</label>
-            <input type = "text" id="propNoun2">
+            <label for ="slogan">Your Company Motto / Slogan</label>
+            <input type = "text" id="slogan">
 
             <input type = "submit" value="Let's Swim!">
         </form>
     </div>
     </main>
+
+    <section>
+        <div class="line line-1">
+            <div class="wave wave1" style="background-image: url(images/1.png)"></div>
+        </div>
+
+        <div class="line line-2">
+            <div class="wave wave2" style="background-image: url(images/2.png)"></div>
+        </div>
+
+        <div class="line line-3">
+            <div class="wave wave3" style="background-image: url(images/3.png)"></div>
+        </div>
+    </section>
     
 </body>
 </html>

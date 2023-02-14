@@ -1,28 +1,55 @@
 /* STYLE THE BODY */
 body{
-    background: #1261E2;
+    background: rgb(56,156,215);
+    background: linear-gradient(90deg, rgba(56,156,215,1) 0%, rgba(34,32,84,1) 100%);
+    font-family: 'Audiowide', cursive;
 }
 main{
-    
     display: flex;
-    flex-direction: column;
-}
-main div{
-    /* margin-bottom: 10%; */
+    justify-content: space-evenly;
 }
 
 /* STYLE THE BANNER */
 
 #banner {
-    margin:auto;
-    margin-top: 10%;
-    text-align: center;
+    margin-top: 5%;
+    text-align: left;
 }
 
-#banner h1{
-    font-family: 'Rubik Vinyl', cursive;
-    font-size: 2.5em;
+#banner h1:first-child{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 5em;
+    line-height: 150%;
+    margin: 0;
     color: white;
+}
+#banner h1{
+    font-size: 2.5em;
+    color: rgb(34,32,84);
+}
+/* STYLE THE BUTTON */
+button{
+    border-radius: 10px;
+    display: flex;
+    padding-left: 3%;
+    padding-right: 3%;
+    align-items: center;
+    gap: 10px;
+}
+
+#buttons{
+    display: flex;
+    gap: 10%;
+}
+
+/* STYLE THE JUDGES */
+.judges{
+    margin-top: 15%;
+    color: white;
+}
+
+.judges img:hover{
+    transform:scale(1.1);
 }
 
 /* STYLE THE WAVE ANIMATION */
@@ -41,23 +68,23 @@ main div{
     position: absolute;
     left: 0;
     width: 200%;
-    height: 100%;
+    height: 20%;
     background-repeat: repeat no-repeat;
     background-position: 0 bottom;
     transform-origin: center bottom;
 }
 .wave1{
     -webkit-background-size: 50% 80px;
-    background-size: 50% 80px;
+    background-size: 50% 170px;
 }
 .wave2{
     -webkit-background-size: 50% 100px;
-    background-size: 50% 100px;
+    background-size: 50% 190px;
     animation: animate 12s linear infinite;
 }
 .wave3{
     -webkit-background-size: 50% 80px;
-    background-size: 50% 80px;
+    background-size: 50% 150px;
     animation: animate 18s linear infinite;
 }
 
@@ -72,17 +99,25 @@ main div{
         transform: translateX(-50%) translateZ(0) scaleY(1);
     }
 }
+
 /* STYLE THE FORM*/
 
+#formcss{
+    margin-top: 5%;
+    color: rgb(34,32,84);
+}
+
+#formcss span{
+    color: #389cd7;
+}
+
 #formcss form{
-    width: 80%;
     margin: auto;
     display: flex;
     flex-direction: column;
-    font-family: 'Itim', cursive;
     color: white;
-    font-size: 1.2em;
-    line-height: 2.5em;
+    /* font-size: 1.2em; */
+    line-height: 3em;
     position: relative;
     z-index: 0;
 }
