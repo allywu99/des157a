@@ -103,7 +103,7 @@ button{
 /* STYLE THE FORM*/
 
 #formcss{
-    margin-top: 5%;
+    margin-top: 3%;
     color: rgb(34,32,84);
 }
 
@@ -153,4 +153,6 @@ input[type=text], select {
     /* STYLE THE RESULTS */
     #formcss p{
         color: white;
+        font-size: 1.3em;
+        line-height: 1.7em;
     }

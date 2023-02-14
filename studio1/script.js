@@ -50,7 +50,7 @@
             document.getElementById('bigNum').style.border = "2px solid red";
         }
         else {
-            myText = `<p>Hi, my name is ${name} and I'm from ${hometown}.<br> I'm seeking ${bigNum} in exchange for ${smallNum} for my business: ${bizName}!<br> So, Sharks, if you're ready, ${slogan}!</p>`
+            myText = `<p>Hi, my name is ${name} and I'm from ${hometown}.<br> I'm seeking $${bigNum} in exchange for ${smallNum}% for my business: ${bizName}!<br> So, Sharks, if you're ready, ${slogan}!</p>`
         }
 
 
