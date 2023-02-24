@@ -1,17 +1,26 @@
 /* EDIT THE BODY / MAIN */
 body{
-    background: rgb(25,29,50);
-    background: linear-gradient(90deg, rgba(25,29,50,1) 0%, rgba(109,59,71,1) 81%);
+    /* background: rgb(25,29,50);
+    background: linear-gradient(90deg, rgba(25,29,50,1) 0%, rgba(109,59,71,1) 81%); */
+    background-color: #191D32;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #191D32 120px ), repeating-linear-gradient( #6D3B4755, #6D3B47 );
+    background-repeat: no-repeat;
+    height: 3000px;
+    width: 1200px;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 
 main{
     margin-left: 10%;
     margin-top: 5%;
+    height: 3000px;
+    width: 1200px;
 }
 main h1{
     color: white;
-    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 3em;
 }
@@ -21,6 +30,10 @@ main h3{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 1.8em;
+}
+
+main article h3{
+    margin-top: 50%;
 }
 
 #sub{
@@ -42,7 +55,7 @@ main h3{
     top: 35%;
     left: 0;
     height: 200px;
-    transition: all 50s linear;
+    transition: all 35s linear;
 }
 
 #slider div img {
@@ -62,7 +75,7 @@ main h3{
     top: 59%;
     left: 0;
     height: 200px;
-    transition: all 50s linear;
+    transition: all 35s linear;
 }
 
 #slider2 div img {
@@ -74,4 +87,83 @@ main h3{
 .c, .d {
    display: flex;
    height: 100%;
+}
+
+/* STYLE EACH SECTION */
+.sec1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    color: white;
+}
+
+.sec1{
+    margin-top: 40%;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-title{
+    font-size: 4em;
+    margin-bottom: 50px;
+}
+
+.content{
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .image{
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: hidden; 
+}
+
+.content .image img{
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content .text-box{
+    z-index: 222;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transform: translate(-80px, 50px);
+}
+
+.content .text-box .h3{
+    font-size: 2em;
+    margin-bottom: 5%;
+}
+
+.media-icons{
+    margin-top: 5%;
+}
+
+.media-icons a{
+    color: white;
+    font-size: 2em;
+    margin: 60px;
 }

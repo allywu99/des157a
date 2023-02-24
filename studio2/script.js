@@ -8,8 +8,8 @@
         let sliderWidth;
         let sliderContent2;
         let sliderWidth2;
-        let fullSlider = document.querySelector('body');
-        let fullSlider2 = document.querySelector('body');
+        let fullSlider = document.querySelector('.slider1');
+        let fullSlider2 = document.querySelector('.slider2');
         const clonedSlider = fullSlider.innerHTML;
         const clonedSlider2 = fullSlider.innerHTML;
     
@@ -27,7 +27,7 @@
         function repeatAnimation() {
             fullSlider.addEventListener("transitionend", function () {
                 console.log('going around again!');
-                document.querySelector('body').innerHTML = clonedSlider;
+                document.querySelector('.slider1').innerHTML = clonedSlider;
                 fullSlider = document.querySelector('#slider');
                 animateSlider();
             });
@@ -47,11 +47,11 @@
         function repeatAnimation2() {
             fullSlider2.addEventListener("transitionend", function () {
                 console.log('going around again!');
-                document.querySelector('body').innerHTML = clonedSlider2;
+                document.querySelector('.slider2').innerHTML = clonedSlider2;
                 fullSlider = document.querySelector('#slider2');
                 animateSlider2();
             });
-        }
+        } 
         
     });
 })();
