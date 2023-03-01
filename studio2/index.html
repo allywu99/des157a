@@ -14,12 +14,14 @@
 </head>
 <body>
     <main>
-        <h1>Allyson's Photo Editing Journey</h1>
+        <header>
+            <h1>Allyson's Photo Editing Journey</h1>
             <div id="sub">
                 <h3>featuring</h3>
                 <img src="images/lightroom.png" alt="Adobe Lightroom Logo" width="37" height="36">
                 <img src="images/photoshop.png" alt="Adobe Photoshop Logo" width="41" height="42">
             </div>
+        </header>
             
             <section id="one">
                 <div class="slider">
@@ -59,7 +61,8 @@
                     </div>
 
                     <section id="ol-one" class="overlay hidden">
-                        <article>
+                        <article> 
+                            <!-- insert compare html -->
                             <h2>Overlay content here</h2>
                             <img src="images/studio/danielle.JPG" alt = "Danielle unedited image" width="480" height="720">
                             <button class="corner close">&otimes;</button>
@@ -97,7 +100,7 @@
             <div class="before">
                 <div class="after"></div>
             </div>
-            <input type="range" min="0", max="640", step="10" id="compare-ip">
+            <input type="range" min="0" max="480" value = "50" step="10" id="compare-ip">
         </div>
     </main>
 </body>
