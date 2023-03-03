@@ -55,11 +55,27 @@
     }
 
     //JS before/after slider
-    document.querySelector(".compare #compare-ip").addEventListener("input", function(e){
+    document.querySelector(".compare #compare-ip1").addEventListener("input", function(e){
         document.querySelector(".compare .before .after").style.width = (+e.target.value) + "px";
     }) 
 
-    document.querySelector(".compare #compare-ip").addEventListener("change", function(e){
+    document.querySelector(".compare #compare-ip1").addEventListener("change", function(e){
+        document.querySelector(".compare .before .after").style.width = (+e.target.value) + "px";
+    }) 
+
+    document.querySelector(".compare #compare-ip2").addEventListener("input", function(e){
+        document.querySelector(".compare .before .after").style.width = (+e.target.value) + "px";
+    }) 
+
+    document.querySelector(".compare #compare-ip2").addEventListener("change", function(e){
+        document.querySelector(".compare .before .after").style.width = (+e.target.value) + "px";
+    }) 
+
+    document.querySelector(".compare #compare-ip3").addEventListener("input", function(e){
+        document.querySelector(".compare .before .after").style.width = (+e.target.value) + "px";
+    }) 
+
+    document.querySelector(".compare #compare-ip3").addEventListener("change", function(e){
         document.querySelector(".compare .before .after").style.width = (+e.target.value) + "px";
     }) 
 
