@@ -26,12 +26,12 @@
             <section id="one">
                 <div class="slider">
                 <div class="a">
-                    <img src="images/scrolling/1.jpg" alt="Photo 1">
-                    <img src="images/scrolling/2.jpg" alt="Photo 2">
-                    <img src="images/scrolling/3.jpg" alt="Photo 3">
-                    <img src="images/scrolling/4.jpg" alt="Photo 4">
-                    <img src="images/scrolling/5.jpg" alt="Photo 5">
-                    <img src="images/scrolling/6.jpg" alt="Photo 6">
+                    <img src="images/scrolling/1.png" alt="Photo 1">
+                    <img src="images/scrolling/2.png" alt="Photo 2">
+                    <img src="images/scrolling/3.png" alt="Photo 3">
+                    <img src="images/scrolling/4.png" alt="Photo 4">
+                    <img src="images/scrolling/5.png" alt="Photo 5">
+                    <img src="images/scrolling/6.png" alt="Photo 6">
                 </div>
             </div>
             </section>
@@ -39,49 +39,97 @@
             <section id="two">
                 <div class="slider">
                 <div class="a">
-                    <img src="images/scrolling/7.jpg" alt="Photo 7">
-                    <img src="images/scrolling/8.jpg" alt="Photo 8">
-                    <img src="images/scrolling/9.jpg" alt="Photo 9">
-                    <img src="images/scrolling/10.jpg" alt="Photo 10">
-                    <img src="images/scrolling/11.jpg" alt="Photo 11">
-                    <img src="images/scrolling/12.jpg" alt="Photo 12">
+                    <img src="images/scrolling/7.png" alt="Photo 7">
+                    <img src="images/scrolling/8.png" alt="Photo 8">
+                    <img src="images/scrolling/9.png" alt="Photo 9">
+                    <img src="images/scrolling/10.png" alt="Photo 10">
+                    <img src="images/scrolling/11.png" alt="Photo 11">
+                    <img src="images/scrolling/12.png" alt="Photo 12">
                 </div>
                 </div>
             </section>
         
+            <div class="scrolldown">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
         <section class="chunk1">
             <h2 class = "title1">Light Manipulation</h2>
                 <div class = "content">
 
                     <div class="image">
-                        <a href=# class = "open" id="one"><img src="images/studio/danielle.JPG" alt = "Danielle unedited image" width="300" height="450">
-                        <div class="caption"></a>
+                        <img src="images/studio/danielle.JPG" alt = "Danielle unedited image" width="300" height="450">
+                        <a href="#" class = "caption open" id="danielle">
                             <h2>Click to Edit!</h2>
-                        </div>
+                        </a>
                     </div>
 
-                    <section id="ol-one" class="overlay hidden">
-                        <article> 
-                            <!-- insert compare html -->
-                            <h2>Overlay content here</h2>
-                            <img src="images/studio/danielle.JPG" alt = "Danielle unedited image" width="480" height="720">
-                            <button class="corner close">&otimes;</button>
-                        </article>
-                    </section>
+                        <section id="ol-danielle" class="overlay hidden">
+                            <article> 
+                                <!-- insert compare html -->
+                                <div class="compare" id="danielle-before">
+                                    <div class="before">
+                                        <div class="after" id="danielle-after"></div>
+                                    </div>
+                                    <input type="range" min="0" max="480" value = "50" step="10" id="compare-ip">
+                                </div>
+
+                                <div class="lightroom">
+                                    <div class="heading">
+                                        <h2>Adobe Lightroom Edits</h2>
+                                        <img src="images/lightroom.png" alt="Adobe Lightroom Logo" width="37" height="36">
+                                    </div>
+                                    
+                                    <img src="images/lightroom/danielle/1.png" alt = "lighting edits">
+                                    <img src="images/lightroom/danielle/2.png" alt = "lighting edits">
+                                    <img src="images/lightroom/danielle/2.png" alt = "lighting edits">
+                                </div>
+                            </article><button class="corner close">&otimes;</button>
+                        </section>
 
                     <div class="image">
-                        <img src="images/studio/serina1.jpg" alt = "Serina unedited image 1" width="300" height="450">
-                        <div class="caption">
+                        <img src="images/studio/serina1.png" alt = "Serina unedited image 1" width="300" height="450">
+                        <a href="#" class = "caption open" id="serina1">
                             <h2>Click to Edit!</h2>
-                        </div>
+                        </a>
                     </div>
+
+                        <section id="ol-serina1" class="overlay hidden">
+                            <article> 
+                                <!-- insert compare html -->
+                                <div class="compare" id="serina1-before">
+                                    <div class="before">
+                                        <div class="after" id="serina1-after"></div>
+                                    </div>
+                                    <input type="range" min="0" max="480" value = "50" step="10" id="compare-ip">
+                                </div>
+
+                                <button class="corner close">&otimes;</button>
+                            </article>
+                        </section>
                     
                     <div class="image">
-                        <img src="images/studio/serina2.jpg" alt = "Serina unedited image 2" width="300" height="450">
-                        <div class="caption">
+                        <img src="images/studio/serina2.png" alt = "Serina unedited image 2" width="300" height="450">
+                        <a href="#" class = "caption open" id="serina2">
                             <h2>Click to Edit!</h2>
-                        </div>
+                        </a>
                     </div>  
+
+                        <section id="ol-serina2" class="overlay hidden">
+                            <article> 
+                                <!-- insert compare html -->
+                                <div class="compare" id="serina2-before">
+                                    <div class="before">
+                                        <div class="after" id="serina2-after"></div>
+                                    </div>
+                                    <input type="range" min="0" max="480" value = "50" step="10" id="compare-ip">
+                                </div>
+
+                                <button class="corner close">&otimes;</button>
+                            </article>
+                        </section>
                 </div>
 
                 <div class="text-box">
@@ -96,12 +144,6 @@
                 </div> -->
         </section>
 
-        <div class="compare">
-            <div class="before">
-                <div class="after"></div>
-            </div>
-            <input type="range" min="0" max="480" value = "50" step="10" id="compare-ip">
-        </div>
     </main>
 </body>
 </html>

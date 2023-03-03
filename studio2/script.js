@@ -35,12 +35,14 @@
     ScrollReveal().reveal(".chunk1 .text-box", {delay:550, origin: 'right'});
 
     //creating the overlays for the images 
-    const openBtns = document.querySelectorAll('.open');
+    const openBtns = document.querySelectorAll('.caption');
     const closeBtns = document.querySelectorAll('.close');
     for (const eachBtn of openBtns){
+        // console.log(eachBtn);
         eachBtn.addEventListener('click', function(event){
             event.preventDefault();
-            const thisBtn = event.target.id;
+            const thisBtn = this.id;
+            // console.log(thisBtn);
             document.getElementById(`ol-${thisBtn}`).className = 'overlay showing';
         });
     }
