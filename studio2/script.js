@@ -29,10 +29,10 @@
         duration: 2500,
         delay: 400
     });
-
-    ScrollReveal().reveal(".title1", {delay:400, origin: 'left'});
-    ScrollReveal().reveal(".chunk1 .image", {delay:500, origin: 'bottom', interval: 50});
-    ScrollReveal().reveal(".chunk1 .text-box", {delay:550, origin: 'right'});
+    ScrollReveal().reveal(".level", {delay:400, origin: 'right'});
+    ScrollReveal().reveal(".title", {delay:400, origin: 'left'});
+    ScrollReveal().reveal(".chunk .image", {delay:500, origin: 'bottom', interval: 50});
+    ScrollReveal().reveal(".chunk .text-box", {delay:500, origin: 'right'});
 
     //creating the overlays for the images 
     const openBtns = document.querySelectorAll('.caption');
@@ -63,20 +63,40 @@
         document.querySelector(".compare .before .after").style.width = (+e.target.value) + "px";
     }) 
 
-    document.querySelector(".compare #compare-ip2").addEventListener("input", function(e){
-        document.querySelector(".compare .before .after").style.width = (+e.target.value) + "px";
+    document.querySelector("#ol-serina1 .compare #compare-ip2").addEventListener("input", function(e){
+        document.querySelector("#ol-serina1 .compare .before .after").style.width = (+e.target.value) + "px";
     }) 
 
-    document.querySelector(".compare #compare-ip2").addEventListener("change", function(e){
-        document.querySelector(".compare .before .after").style.width = (+e.target.value) + "px";
+    document.querySelector("#ol-serina1 .compare #compare-ip2").addEventListener("change", function(e){
+        document.querySelector("#ol-serina1 .compare .before .after").style.width = (+e.target.value) + "px";
     }) 
 
-    document.querySelector(".compare #compare-ip3").addEventListener("input", function(e){
-        document.querySelector(".compare .before .after").style.width = (+e.target.value) + "px";
+    document.querySelector("#ol-serina2 .compare #compare-ip3").addEventListener("input", function(e){
+        document.querySelector("#ol-serina2 .compare .before .after").style.width = (+e.target.value) + "px";
     }) 
 
-    document.querySelector(".compare #compare-ip3").addEventListener("change", function(e){
-        document.querySelector(".compare .before .after").style.width = (+e.target.value) + "px";
+    document.querySelector("#ol-serina2 .compare #compare-ip3").addEventListener("change", function(e){
+        document.querySelector("#ol-serina2 .compare .before .after").style.width = (+e.target.value) + "px";
+    }) 
+    document.querySelector("#ol-lauren .compare #compare-ip4").addEventListener("input", function(e){
+        document.querySelector("#ol-lauren .compare .before .after").style.width = (+e.target.value) + "px";
     }) 
 
+    document.querySelector("#ol-lauren .compare #compare-ip4").addEventListener("change", function(e){
+        document.querySelector("#ol-lauren .compare .before .after").style.width = (+e.target.value) + "px";
+    }) 
+    document.querySelector("#ol-milap .compare #compare-ip5").addEventListener("input", function(e){
+        document.querySelector("#ol-milap .compare .before .after").style.width = (+e.target.value) + "px";
+    }) 
+
+    document.querySelector("#ol-milap .compare #compare-ip5").addEventListener("change", function(e){
+        document.querySelector("#ol-milap .compare .before .after").style.width = (+e.target.value) + "px";
+    })
+    document.querySelector("#ol-linh .compare #compare-ip6").addEventListener("input", function(e){
+        document.querySelector("#ol-linh .compare .before .after").style.width = (+e.target.value) + "px";
+    }) 
+
+    document.querySelector("#ol-linh .compare #compare-ip6").addEventListener("change", function(e){
+        document.querySelector("#ol-linh .compare .before .after").style.width = (+e.target.value) + "px";
+    })
 })();

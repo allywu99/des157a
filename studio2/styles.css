@@ -1,31 +1,33 @@
 /* EDIT THE BODY / MAIN */
 body{
-    /* background: rgb(25,29,50);
-    background: linear-gradient(90deg, rgba(25,29,50,1) 0%, rgba(109,59,71,1) 81%); */
-    background-color: #191D32;
-    opacity: 1;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #191D32 120px ), repeating-linear-gradient( #6D3B4755, #6D3B47 );
-    background-repeat: no-repeat;
+    max-width: 1200;
     overflow-x: hidden;
+    background: linear-gradient(26deg,#dde9ad,#8ee2db,#e97b7a,#274be0,#72016d);
+    background-size: 300% 300%;
+    animation: gradient-animation 10s ease infinite;
+    background-color: #ffffff;
     font-family: 'Poppins', sans-serif;
 }
-
-header{
-    margin-top: 5%;
-    margin-left: 8%;
-}
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
 header h1{
-    color: white;
+    margin-left: 16%;
+    margin-top: 5%;
+    stroke: white;
     font-weight: 700;
-    font-size: 3em;
-}
-
-header h3{
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 1.8em;
+    font-size: 5em;
+    font-family: 'Nabla', cursive;
 }
 
 a{
@@ -33,18 +35,6 @@ a{
 }
 main article h3{
     margin-top: 50%;
-}
-
-#sub{
-    display: flex;
-    gap: 2%;
-    align-items: center;
-}
-
-#sub img{
-    transform: scale(1.2);
-    -webkit-box-shadow: 0px 0px 14px 1px rgba(255,255,255,0.7); 
-    box-shadow: 0px 0px 14px 1px rgba(255,255,255,0.7);
 }
 
 /* PHOTO AUTO PLAY */
@@ -156,7 +146,7 @@ main article h3{
     }
 }
 /* STYLE EACH SECTION */
-.chunk1{
+.chunk{
     position: relative;
     margin-top: 20%;
     color: white;
@@ -167,10 +157,16 @@ main article h3{
     text-align: center;
 }
 
-.title1{
+.title{
     font-size: 4em;
     margin-bottom: 50px;
     text-align: center;
+}
+
+.level{
+    font-family: 'Yellowtail', cursive;
+    font-size: 3em;
+    line-height: 0;
 }
 
 .content{
@@ -217,7 +213,7 @@ main article h3{
     border-radius: 10px;
 }
 
-.chunk1 .text-box{
+.chunk .text-box{
     position: relative;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
@@ -228,24 +224,14 @@ main article h3{
     margin-top: 5%;
 }
 
-.chunk1 .text-box .h3{
+.chunk .text-box .h3{
     font-size: 3em;
 }
 
-.chunk1 .text-box p{
+.chunk .text-box p{
     font-size: 1.1em;
     line-height: 150%;
 }
-
-/* .media-icons{
-    margin-top: 5%;
-}
-
-.media-icons a{
-    color: white;
-    font-size: 2em;
-    margin: 60px;
-} */
 
 /* STYLE THE OVERLAYS */
 .hidden {
@@ -268,7 +254,7 @@ main article h3{
 
 .overlay article{
     display: flex;
-    width: 1100px;
+    width: 950px;
     border-radius: 25px;
     box-sizing: border-box;
     background-color: #fff;
@@ -277,13 +263,16 @@ main article h3{
     transform: translate(-50%, -50%);
 }
 
-.overlay article .lightroom{
+.lightroom .edit-panels{
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    margin-left: 20%;
+    margin-top: 40%;
 }
 
 .lightroom img{
-    transform: scale(0.6);
+    width: 200px;
     box-shadow: -9px 8px 26px rgba(0, 0, 0, 0.2)  ; 
 	-webkit-box-shadow: -9px 8px 26px rgba(0, 0, 0, 0.2)  ; 
 	-moz-box-shadow: -9px 8px 26px rgba(0, 0, 0, 0.2)  ;
@@ -295,20 +284,10 @@ main article h3{
     font-size: 2em;
 }
 
-.lightroom .heading{
-    display: flex;
-    margin-top: 5%;
-}
-
-.lightroom .heading img{
-    transform: scale(1.2);
-    margin-top: 2%;
-}
-
 .corner{
     font-size: 36px;
-    left: 400px;
-    bottom: 420px;
+    left: 420px;
+    bottom: 400px;
     border: none;
     background-color: transparent;
     color: tomato;
@@ -326,8 +305,6 @@ main article h3{
     position: relative;
     width: 480px;
     height: 720px;
-    /* border: 1px solid #f5f5f5; */
-    /* box-shadow: 0px, 0px, 20px, 5px rgba(0,0,0,0.15);  */
 }
 .compare .before {
     position: relative;
@@ -336,9 +313,12 @@ main article h3{
     height: 100%;
 }
 
-#danielle-before{background: url(images/studio/danielle.png);} 
-#serina1-before{background: url(images/studio/serina1.png);}
-#serina2-before{background: url(images/studio/serina2.png);}
+#danielle-before{background: url(images/studio/danielle.jpg);} 
+#serina1-before{background: url(images/studio/serina1.jpg);}
+#serina2-before{background: url(images/studio/serina2.jpg);}
+#lauren-before{background: url(images/studio/lauren.jpg);} 
+#milap-before{background: url(images/studio/milap.jpg);} 
+#linh-before{background: url(images/studio/linh.jpg);} 
 
 .compare .before .after{
     position: absolute;
@@ -349,9 +329,13 @@ main article h3{
     z-index: 2;
 }
 
-#danielle-after{background: url(images/studio/danielle-edit.png);} 
-#serina1-after{background: url(images/studio/serina1-edit.jpg.png);}
+#danielle-after{background: url(images/studio/danielle-edit.jpg);} 
+#serina1-after{background: url(images/studio/serina1-edit.jpg);}
 #serina2-after{background: url(images/studio/serina2-edit.jpg);}
+#lauren-after{background: url(images/studio/lauren-edit.jpg);} 
+#milap-after{background: url(images/studio/milap-edit.jpg);} 
+#linh-after{background: url(images/studio/linh-edit.jpg);} 
+
 
 .compare input{
     position: absolute;
