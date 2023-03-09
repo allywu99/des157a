@@ -1,0 +1,238 @@
+body{
+    background: url(images/breakfast.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+main{
+    text-align: center;
+}
+@font-face {
+    font-family: fancy;
+    src: url(fonts/fancy.otf);
+}
+
+header{
+    max-width: 1200px;
+    margin: auto;
+}
+header h1{
+    margin-left: 1%;
+    font-family: fancy;
+    font-size: 7em;
+    color: #BA8A62;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #82401F;
+    line-height: 1.1em;
+    margin: 0;
+}
+
+header h2{
+    margin-top: 8%;
+    font-family: 'VT323', monospace;
+    font-size: 4em;
+    line-height: 0;
+    color: #3F292B;
+    width: 100%;
+    border-radius: 5px solid;
+    animation: blink 1.5s linear infinite;
+}
+@keyframes blink{
+    50%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0.5;
+    }
+}
+header p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    color: #3F292B;
+}
+
+header h1:hover{
+    animation: bounce 1s ease-in-out;
+    cursor: url(images/pancakes.png), grabbing;
+}
+@keyframes bounce{
+    0%,
+    20%,
+    60%,
+    100%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    80%{
+        transform: translateY(-20px);
+    }
+}
+
+header img:hover{
+    animation: jitter 0.5s linear;
+    cursor: pointer;
+}
+
+@keyframes jitter{
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(2px);
+    }
+    75%{
+        transform: translateX(-2px);
+    }
+}
+.card {
+    position: relative;
+    width: 1300px;
+    height: 800px;
+    padding: 10px 40px;
+    background: rgba(186, 138, 98, 0.3);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    margin: auto;
+    margin-top: 4%;
+  }
+
+  .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+  }
+
+  .characters{
+    display: flex;
+    gap: 50%;
+    justify-content: center;
+  }
+  .characters img:hover{
+    animation: bounce 0.75s ease-out;
+    cursor: pointer;
+  }
+
+/* STYLE THE OVERLAY TUTORIAL */
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+#overlay{
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    margin: 0;
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    width: 100vw;
+    height: 100vh;
+    transition-property: opacity, visibility;
+    transition-duration: 0.75s;
+    transition-timing-function: ease;
+}
+/* STYLE THE BUTTONS */
+button {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+   }
+   
+   .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105%;
+    border-radius: 25px;
+    background: linear-gradient(
+       to left,
+       hsl(340deg 100% 16%) 0%,
+       hsl(340deg 100% 32%) 8%,
+       hsl(340deg 100% 32%) 92%,
+       hsl(340deg 100% 16%) 100%
+     );
+   }
+   
+   .front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   button:hover {
+    filter: brightness(110%);
+   }
+   
+   button:hover .front {
+    transform: translateY(-6px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   button:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+   }
+   
+   button:hover .shadow {
+    transform: translateY(4px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   button:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+   }
+   
+   button:focus:not(:focus-visible) {
+    outline: none;
+   }

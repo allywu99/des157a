@@ -1,7 +1,6 @@
 ( function(){
     'use strict';
     console.log('reaing js');
-
     //JS for image slider 
     window.addEventListener('load', function () {
     
