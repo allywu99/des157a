@@ -9,6 +9,18 @@ body{
 main{
     text-align: center;
 }
+
+.hero{
+    display: flex;
+    align-items: center;
+}
+
+.hero button{
+    padding: 20px;
+    transform: scale(1.7);
+    color: #3F292B;
+    height: 50px;
+}
 @font-face {
     font-family: fancy;
     src: url(fonts/fancy.otf);
@@ -30,7 +42,7 @@ header h1{
 }
 
 header h2{
-    margin-top: 8%;
+    margin-left: 8%;
     font-family: 'VT323', monospace;
     font-size: 4em;
     line-height: 0;
@@ -135,14 +147,17 @@ header img:hover{
     top: 0;
     left: 0;
     margin: 0;
-    position: fixed; /* Sit on top of the page content */
+    position: absolute; /* Sit on top of the page content */
     width: 100%; /* Full width (cover the whole page) */
     height: 100%; /* Full height (cover the whole page) */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    width: 100vw;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
     transition-property: opacity, visibility;
-    transition-duration: 0.75s;
+    transition-duration: 0.5s;
     transition-timing-function: ease;
 }
 /* STYLE THE BUTTONS */

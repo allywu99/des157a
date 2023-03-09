@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;500&family=Audiowide&family=Comic+Neue&family=EB+Garamond&family=Inter:wght@500&family=Libre+Barcode+39+Text&family=Nunito:wght@400;600&family=Oswald:wght@500&family=Poppins:wght@400;600&family=Press+Start+2P&family=Sniglet&family=VT323&family=Vast+Shadow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -17,10 +18,16 @@
 
         <div class="card">
             <header>
-                <h2>game of pig</h2>
+                <div class="hero">
+                    <h2>game of pig</h2>
+                    <button id="playBtn"><i class="fas fa-music"></i></button>
+                    <button id="pauseBtn"><i class="fas fa-pause"></i></button>
+                </div>
+                
                 <h1>Breakfast Edition</h1>
                 <img src="images/pig.png" alt="Cartoon Pig">
-                <p>It’s 11:00am and Sir Hammy is awfully hungry!<br> The first chef to feed him <b>30 dishes</b> gets the glory!</p> 
+                <p id="narrator">It’s 11:00am and Sir Hammy is awfully hungry!<br> The first chef to feed him <b>30 dishes</b> gets the glory!</p> 
+                <div id="score"></div>
             </header>
             
             <section id="overlay" class="hidden">
@@ -31,14 +38,16 @@
                     <span class="front text">CLOSE</span>
                 </button>
             </section>
-            
+
+            <div id="actions"></div>
+
             <div class="buttons">
 
                 <div id="howto">
-                    <button class="open">
+                    <button id="tutorial" class="open">
                     <span class="shadow"></span>
                     <span class="edge"></span>
-                    <span class="front text">HOW TO</span>
+                    <span class="front text">GAME RULES</span>
                 </button>
                 </div>
                 
@@ -58,8 +67,6 @@
             </div>
 
             <div id="game"></div>
-            <div id="actions"></div>
-            <div id="score"></div>
 
         </div>
 

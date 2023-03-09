@@ -7,6 +7,23 @@
 	This gets the second die: gameData.dice[gameData.roll2-1]
 	This gets the score of the current player: gameData.score[gameData.index]
 	*/
+
+	// JS FOR PLAY PAUSE MUSIC
+	let play = document.getElementById("playBtn");
+    let pause = document.getElementById("pauseBtn");
+    let audio = new Audio("audio/cafe.mp3");
+	let audio2 = new Audio("audio/diner.mp3")
+	let audioClick = new Audio("audio/click.mp3");
+
+    play.addEventListener("click", ()=>{
+        audio.play();
+		audio2.play();
+		audio2.volume = 0.1;
+    })
+    pause.addEventListener("click", ()=>{
+        audio.pause();
+		audio2.pause();
+    })
 	//JS for overlay tutorial opening
     document.querySelector('.open').addEventListener('click', function(event){
         event.preventDefault();
@@ -23,17 +40,27 @@
             document.getElementById('overlay').className = 'hidden';
         }   
     });
-	
+
+	// const allBtns = querySelectorAll("button");
+	// for (let i=0; i<allBtns.lengnth; i++){
+	// 	allBtns[i].addEventListener("click", ()=>{
+	// 		audioClick.play();
+	// 		audioClick.volume = 0.5;
+	// 	})
+	// }
+
 	const startGame = document.getElementById('startgame');
+	const gameText = document.getElementById('narrator');
+	const gameTutorial = document.getAnimations('tutorial');
 	const gameControl = document.getElementById('gamecontrol');
 	const game = document.getElementById('game');
 	const score = document.getElementById('score');
 	const actionArea = document.getElementById('actions');
 
 	const gameData = {
-		dice: ['images/1die.jpg', 'images/2die.jpg', 'images/3die.jpg', 
-			   'images/4die.jpg', 'images/5die.jpg', 'images/6die.jpg'],
-		players: ['player 1', 'player 2'],
+		dice: ['images/bacon.png', 'images/2bacon.png', 'images/3bacon.png', 
+			   'images/4bacon.png', 'images/5bacon.png', 'images/6bacon.png'],
+		players: ['Chef 1', 'Chef 2'],
 		score: [0, 0],
 		roll1: 0,
 		roll2: 0,
@@ -41,13 +68,13 @@
 		index: 0,
 		gameEnd: 29
 	};
-
 	startGame.addEventListener('click', function () {
+		audio.play();
 		gameData.index = Math.round(Math.random());
 		console.log(gameData.index);
 
-		gameControl.innerHTML = '<h2>The Game Has Started</h2>';
-		gameControl.innerHTML += '<button id="quit">Wanna Quit?</button>';
+		// gameText.innerHTML = '<p>Chef 1, press <b>"Cook"</b> to start your turn!</p>'
+		startGame.innerHTML = '<button id="quit">Quit Game</button>';
 
 		document
 			.getElementById('quit').addEventListener('click', function () {
@@ -58,7 +85,8 @@
 	});
 
 	function setUpTurn() {
-		game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
+		gameText.innerHTML = `<p>Roll the dice for <b>${gameData.players[gameData.index]}!</b></p>`;
+		gameText.style.fontSize = "1rem";
 		actionArea.innerHTML = '<button id="roll">Roll the Dice</button>';
 		document.getElementById('roll').addEventListener('click', function(){
 
@@ -68,17 +96,17 @@
 	}
 
 	function throwDice(){
-		actionArea.innerHTML = '';
+		// actionArea.innerHTML = '';
 		gameData.roll1 = Math.floor(Math.random() * 6) + 1; //using ceil could result in a zero
 		gameData.roll2 = Math.floor(Math.random() * 6) + 1;
-		game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
-		game.innerHTML += `<img src="${gameData.dice[gameData.roll1-1]}"> 
+		gameText.innerHTML = `<p>Roll the dice for <b>${gameData.players[gameData.index]}!</b></p>`;
+		gameText.innerHTML += `<img src="${gameData.dice[gameData.roll1-1]}"> 
 							<img src="${gameData.dice[gameData.roll2-1]}">`;
 		gameData.rollSum = gameData.roll1 + gameData.roll2;
 
 		// if two 1's are rolled...
 		if( gameData.rollSum === 2 ){ 
-			game.innerHTML += '<p>Oh snap! Snake eyes!</p>';
+			game.innerHTML += '<p>You only cooked <b>2 dishes total???</b> Bad Chef';
 			gameData.score[gameData.index] = 0;
 			gameData.index ? (gameData.index = 0) : (gameData.index = 1);
 			showCurrentScore();
@@ -88,16 +116,17 @@
 		// if either die is a 1...
 		else if(gameData.roll1 === 1 || gameData.roll2 === 1){ 
 			gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-			game.innerHTML += `<p>Sorry, one of your rolls was a one, switching to  ${
+			gameText.innerHTML += `<p>You only cooked <b>1 dish >:(</b> switching to ${
 				gameData.players[gameData.index]
 			}</p>`;
+			gameText.style.fontSize = "0.5rem";
 			setTimeout(setUpTurn, 2000);
 		}
 
 		// if neither die is a 1...
 		else { 
 			gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
-			actionArea.innerHTML = '<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>';
+			actionArea.innerHTML = '<button id="rollagain">Keep Cooking!</button> or <button id="pass">Take a Break</button>';
 
 			document.getElementById('rollagain').addEventListener('click', function () {
 				//setUpTurn();
@@ -128,8 +157,9 @@
 	}
 
 	function showCurrentScore() {
-		score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]}
-		${gameData.score[0]}</strong> and <strong>${gameData.players[1]} 
+		score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]}:
+		${gameData.score[0]}</strong> and <strong>${gameData.players[1]}: 
 		${gameData.score[1]}</strong></p>`;
+		score.style.fontSize = "0.5rem";
 	}
 }());
