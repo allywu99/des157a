@@ -25,30 +25,44 @@
                 </div>
                 
                 <h1>Breakfast Edition</h1>
-                <img src="images/pig.png" alt="Cartoon Pig">
+                <img src="images/pig.png" alt="Cartoon Pig" id="pigBtn">
                 <p id="narrator">It’s 11:00am and Sir Hammy is awfully hungry!<br> The first chef to feed him <b>30 dishes</b> gets the glory!</p> 
+
                 <div id="score"></div>
+
             </header>
             
             <section id="overlay" class="hidden">
                 <img src="images/tutorial.svg" alt = "Game Tutorial">
-                <button class="close">
+                <button id="cancel" class="close">
                     <span class="shadow"></span>
                     <span class="edge"></span>
                     <span class="front text">CLOSE</span>
                 </button>
             </section>
 
+            <div id="selection1">
+                <img src="images/frying-pan.png" class="dish" name="eggs">
+                <img src="images/frying-pan.png" class="dish" name="waffles">
+                <img src="images/frying-pan.png" class="dish" name="bacon">
+            </div>
+
+            <div id="selection2">
+                <img src="images/frying-pan.png" class="dish" name="eggs">
+                <img src="images/frying-pan.png" class="dish" name="waffles">
+                <img src="images/frying-pan.png" class="dish" name="bacon">
+            </div>
+                
             <div id="actions"></div>
 
             <div class="buttons">
 
                 <div id="howto">
                     <button id="tutorial" class="open">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <span class="front text">GAME RULES</span>
-                </button>
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front text">GAME RULES</span>
+                    </button>
                 </div>
                 
 
@@ -62,8 +76,8 @@
             </div>
             
             <div class="characters">
-                <img src="images/Group1.png" alt="Chef 1">
-                <img src="images/Group2.png" alt="Chef 1">
+                <img src="images/Group1.png" alt="Chef 1" id="chef1">
+                <img src="images/Group2.png" alt="Chef 1" id="chef2">
             </div>
 
             <div id="game"></div>

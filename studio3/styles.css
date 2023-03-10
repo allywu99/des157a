@@ -122,10 +122,25 @@ header img:hover{
   }
 
   .characters{
+    position: absolute;
+    /* left: 30%; */
+    top: 65%;
     display: flex;
-    gap: 50%;
+    /* gap: 50%; */
     justify-content: center;
+    width: 100vw;
   }
+
+#chef2{
+        position: absolute;
+        left: 55%;
+  }
+
+  #chef1{
+    position: absolute;
+    left: 10%;
+}
+
   .characters img:hover{
     animation: bounce 0.75s ease-out;
     cursor: pointer;
@@ -171,6 +186,7 @@ button {
     transition: filter 250ms;
     user-select: none;
     touch-action: manipulation;
+    margin: 10px;
    }
    
    .shadow {
