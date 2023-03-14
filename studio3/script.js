@@ -110,7 +110,7 @@
    pigBtn.addEventListener('mouseover', function(){
 		//play oink sound effect
 		audioPig.play();
-		audioPig.volume = 1.2;
+		audioPig.volume = 1;
 	})
 
 

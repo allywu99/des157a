@@ -213,10 +213,10 @@ button {
     border-radius: 25px;
     background: linear-gradient(
        to left,
-       hsl(340deg 100% 16%) 0%,
-       hsl(340deg 100% 32%) 8%,
-       hsl(340deg 100% 32%) 92%,
-       hsl(340deg 100% 16%) 100%
+       #52001b 0%,
+       #a30036 8%,
+       #a30036 92%,
+       #52001b 100%
      );
    }
    
@@ -228,7 +228,7 @@ button {
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
     color: white;
-    background: hsl(345deg 100% 47%);
+    background: #f0003c;
     will-change: transform;
     transform: translateY(-4px);
     transition: transform
