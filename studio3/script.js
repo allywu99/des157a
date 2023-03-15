@@ -50,6 +50,7 @@
 	const gameTutorial = document.getElementById('tutorial');
 	const cancelBtn = document.getElementById('cancel');
 	const pigBtn = document.getElementById('pigBtn');
+	const angryPigBtn = document.getElementById('angryPigBtn');
 	const gameControl = document.getElementById('gamecontrol');
 	const game = document.getElementById('game');
 	const score = document.getElementById('score');
@@ -111,6 +112,10 @@
 		//play oink sound effect
 		audioPig.play();
 		audioPig.volume = 1;
+
+		//switch the normal pig to the angry pig
+		pigBtn.className = 'hidden';
+		angryPigBtn.className ='showing';
 	})
 
 

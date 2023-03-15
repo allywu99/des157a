@@ -50,7 +50,7 @@ header h2{
     line-height: 0;
     color: #3F292B;
     width: 100%;
-    border-radius: 5px solid;
+    border-radius: 5px;
     animation: blink 1.5s linear infinite;
 }
 @keyframes blink{
@@ -73,11 +73,23 @@ header p{
     justify-content: center;
     align-items: center;
 }
+
+.top p{
+    font-family: 'VT323', monospace;
+    color: #3F292B;
+    font-size: 1.2em;
+    position: absolute;
+    margin-top: 12%;
+    margin-right: 15%;
+}
 #header1:hover{
     animation: bounce 1s ease-in-out;
     cursor: url(images/pancakes.png), grabbing;
 }
-
+#angryPigBtn{
+    position: absolute;
+    margin-top: 11%;
+}
 @keyframes bounce{
     0%,
     20%,
@@ -111,7 +123,7 @@ header img:hover{
 }
 .card {
     position: relative;
-    width: 1300px;
+    width: 1400px;
     height: 800px;
     padding: 10px 40px;
     background: rgba(186, 138, 98, 0.3);
@@ -132,23 +144,21 @@ header img:hover{
 
   .characters{
     position: absolute;
-    /* left: 30%; */
     top: 65%;
     display: flex;
-    /* gap: 50%; */
     justify-content: center;
     width: 100vw;
   }
 
-#chef2{
-        position: absolute;
-        left: 55%;
-  }
-
-  #chef1{
+#chef1{
     position: absolute;
     left: 10%;
 }
+
+#chef2{
+    position: absolute;
+    left: 55%;
+  }
 
   .characters img:hover{
     animation: bounce 0.75s ease-out;

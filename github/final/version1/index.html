@@ -10,7 +10,7 @@
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-	<script src="script.js" defer></script>
+	<script src="finalv1.js" defer></script>
     <title>Game of Pig: Breakfast Edition</title>
 </head>
 <body>
@@ -26,7 +26,9 @@
                 
                 <div class="top">
                     <img src="images/title.png" alt="Breakfast Edition title" id="header1" width="800" height="167">
-                    <img src="images/pig.png" alt="Cartoon Pig" id="pigBtn">
+                    <p id="meHungry" class="hidden">Me Hungry!!</p>
+                    <img src="images/angryPig.png" alt="Angry Pig" id="angryPigBtn" class="hidden">
+                    <img src="images/pig.png" alt="Cartoon Pig" id="pigBtn" class="showing">
                 </div>
                 <p id="narrator">It’s 11:00am and Sir Hammy is awfully hungry!<br> The first chef to feed him <b>30 dishes</b> gets the glory!</p> 
 
@@ -43,7 +45,7 @@
                 </button>
             </section>
 
-            <div id="selection1" class="hidden">
+            <!-- <div id="selection1" class="hidden">
                 <img src="images/frying-pan.png" class="dish" name="eggs">
                 <img src="images/frying-pan.png" class="dish" name="waffles">
                 <img src="images/frying-pan.png" class="dish" name="bacon">
@@ -53,7 +55,7 @@
                 <img src="images/frying-pan.png" class="dish" name="eggs">
                 <img src="images/frying-pan.png" class="dish" name="waffles">
                 <img src="images/frying-pan.png" class="dish" name="bacon">
-            </div>
+            </div> -->
                 
             <div id="actions"></div>
 

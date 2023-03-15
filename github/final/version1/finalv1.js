@@ -49,7 +49,9 @@
 	const gameText = document.getElementById('narrator');
 	const gameTutorial = document.getElementById('tutorial');
 	const cancelBtn = document.getElementById('cancel');
+	const meHungry = document.getElementById('meHungry');
 	const pigBtn = document.getElementById('pigBtn');
+	const angryPigBtn = document.getElementById('angryPigBtn');
 	const gameControl = document.getElementById('gamecontrol');
 	const game = document.getElementById('game');
 	const score = document.getElementById('score');
@@ -111,8 +113,18 @@
 		//play oink sound effect
 		audioPig.play();
 		audioPig.volume = 1;
+
+		//switch the normal pig to the angry pig
+		pigBtn.className = 'hidden';
+		angryPigBtn.className ='showing';
+		meHungry.className = 'showing';
 	})
 
+	angryPigBtn.addEventListener('mouseout', function(){
+		pigBtn.className = 'showing';
+		angryPigBtn.className ='hidden';
+		meHungry.className = 'hidden';
+	})
 
 	startGame.addEventListener('click', function () { //event listner for start button
         //play button sound effect
@@ -121,8 +133,7 @@
 
 
 		gameData.index = Math.round(Math.random());
-		console.log(gameData.index);
-		startGame.innerHTML = '<button id="quit"><span class="shadow"></span><span class="edge"></span><span class="front text">Quit Game</span></button>';
+		startGame.innerHTML = '<button id="quit" class="showing"><span class="shadow"></span><span class="edge"></span><span class="front text">Quit Game</span></button>';
 
 		document.getElementById('quit').addEventListener('click', function () {
 			location.reload();
@@ -131,6 +142,7 @@
 			audioClick.volume = 0.7;
 			});
 
+		document.getElementById('quit').className = "hidden";
 		setUpTurn();
 	});
 
