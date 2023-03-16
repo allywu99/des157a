@@ -142,7 +142,7 @@
 			audioClick.volume = 0.7;
 			});
 
-		document.getElementById('quit').className = "hidden";
+		// document.getElementById('quit').className = "hidden";
 		setUpTurn();
 	});
 

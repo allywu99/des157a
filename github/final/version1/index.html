@@ -30,7 +30,6 @@
                     <img src="images/angryPig.png" alt="Angry Pig" id="angryPigBtn" class="hidden">
                     <img src="images/pig.png" alt="Cartoon Pig" id="pigBtn" class="showing">
                 </div>
-                <p id="narrator">It’s 11:00am and Sir Hammy is awfully hungry!<br> The first chef to feed him <b>30 dishes</b> gets the glory!</p> 
 
                 <div id="score"></div>
 
@@ -58,9 +57,11 @@
             </div> -->
                 
             <div id="actions"></div>
+                
+            <p id="narrator">It’s 11:00am and Sir Hammy is awfully hungry!<br> The first chef to feed him <b>30 dishes</b> gets the glory!</p> 
 
             <div class="buttons">
-
+               
                 <div id="howto">
                     <button id="tutorial" class="open">
                         <span class="shadow"></span>
@@ -80,8 +81,19 @@
             </div>
             
             <div class="characters">
-                <img src="images/Group1.png" alt="Chef 1" id="chef1">
-                <img src="images/Group2.png" alt="Chef 1" id="chef2">
+                <div class="charInput" id="chef1">
+                    <h1>Chef 1 Name</h1>
+                    <input type="text" name="text" class="input" placeholder="Type here...">
+                    <img src="images/chef1.png" alt="Chef 1">
+                </div>
+                
+               
+                <div class="charInput" id="chef2">
+                    <h1>Chef 2 Name</h1>
+                    <input type="text" name="text" class="input" placeholder="Type here...">
+                    <img src="images/chef2.png" alt="Chef 1">
+                </div>
+                
             </div>
 
             <div id="game"></div>

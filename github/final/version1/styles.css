@@ -82,13 +82,25 @@ header p{
     margin-top: 12%;
     margin-right: 15%;
 }
+
+#narrator{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.7em;
+    color: #3F292B;
+    margin-top: 3%;
+ }
+
 #header1:hover{
     animation: bounce 1s ease-in-out;
     cursor: url(images/pancakes.png), grabbing;
 }
+
+#pigBtn{
+    margin-top: 3%;
+}
 #angryPigBtn{
     position: absolute;
-    margin-top: 11%;
+    margin-top: 13.5%;
 }
 @keyframes bounce{
     0%,
@@ -134,7 +146,6 @@ header img:hover{
     margin: auto;
     margin-top: 4%;
   }
-
   .buttons{
     display: flex;
     justify-content: center;
@@ -143,23 +154,32 @@ header img:hover{
   }
 
   .characters{
-    position: absolute;
-    top: 65%;
     display: flex;
-    justify-content: center;
-    width: 100vw;
   }
 
-#chef1{
+  #chef1{
     position: absolute;
-    left: 10%;
+    right: 78%;
+    bottom: 5%;
+  }
+
+  #chef2{
+    position: absolute;
+    left: 78%;
+    bottom: 5%;
+  }
+
+  .charInput{
+    display: flex;
+    flex-direction: column;
+    font-family: 'VT323', monospace;
+    color: #3F292B;
 }
 
-#chef2{
-    position: absolute;
-    left: 55%;
-  }
 
+.charInput input{
+    margin-bottom: 15%;
+}
   .characters img:hover{
     animation: bounce 0.75s ease-out;
     cursor: pointer;
@@ -286,3 +306,27 @@ button {
    button:focus:not(:focus-visible) {
     outline: none;
    }
+
+/* STYLE THE FORM */
+.input {
+  font-family: monospace;
+  font-size: 1.5em;
+  max-width: 190px;
+  outline: none;
+  border: 1px solid #dadada;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f3f7fe;
+  transition: .3s;
+  color: #3F292B;
+}
+
+.input::placeholder {
+  color: #3F292B;
+}
+
+.input:focus {
+  border: 1px solid #FBC551;
+  box-shadow: 0 0 0 5px #F7931E
+}
+
