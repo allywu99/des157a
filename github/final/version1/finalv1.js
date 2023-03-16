@@ -148,7 +148,7 @@
 
 	function setUpTurn() {
 		gameText.innerHTML = `<p>Roll the dice for <b>${gameData.players[gameData.index]}!</b></p>`;
-		gameText.style.fontSize = "1rem";
+		gameText.style.fontSize = "2em";
 		actionArea.innerHTML = '<button id="roll"><span class="shadow"></span><span class="edge"></span><span class="front text">Start Cooking</span></button>';
 		document.getElementById('roll').addEventListener('click', function(){
 
@@ -179,6 +179,7 @@
 		// if two 1's are rolled...
 		if( gameData.rollSum === 2 ){ 
 			game.innerHTML += '<p>You only cooked <b>2 dishes total???</b> Bad Chef';
+			game.style.fontSize = "1rem";
 			gameData.score[gameData.index] = 0;
 			gameData.index ? (gameData.index = 0) : (gameData.index = 1);
 			showCurrentScore();
@@ -238,6 +239,6 @@
 		score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]}:
 		${gameData.score[0]}</strong> and <strong>${gameData.players[1]}: 
 		${gameData.score[1]}</strong></p>`;
-		score.style.fontSize = "0.5rem";
+		score.style.fontSize = "0.8rem";
 	}
 }());

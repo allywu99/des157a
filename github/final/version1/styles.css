@@ -313,6 +313,7 @@ button {
   font-size: 1.5em;
   max-width: 190px;
   outline: none;
+  text-align: center;
   border: 1px solid #dadada;
   padding: 10px;
   border-radius: 5px;
