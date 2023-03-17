@@ -43,7 +43,7 @@ header h1{
     margin: 0;
 }
 
-header h2{
+.hero h2{
     margin-left: 8%;
     font-family: 'VT323', monospace;
     font-size: 4em;
@@ -67,19 +67,19 @@ header p{
     color: #3F292B;
 }
 
-.top{
+#sirHammy{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.top p{
+#meHungry {
     font-family: 'VT323', monospace;
     color: #3F292B;
     font-size: 1.2em;
     position: absolute;
-    margin-top: 12%;
+    margin-top: 4.5%;
     margin-right: 15%;
 }
 
@@ -100,7 +100,7 @@ header p{
 }
 #angryPigBtn{
     position: absolute;
-    margin-top: 13.5%;
+    margin-top: 2.5%;
 }
 @keyframes bounce{
     0%,
@@ -331,3 +331,26 @@ button {
   box-shadow: 0 0 0 5px #F7931E
 }
 
+/* STYLE THE INPUT SCREEN */
+#nameText{
+    font-family: 'VT323', monospace;
+    color: #3F292B;
+    font-size: 2em;
+}
+
+#chef1-1 {
+    position: absolute;
+    right: 60%;
+    bottom: 5%;
+  }
+
+  #chef2-1 {
+    position: absolute;
+    left: 60%;
+    bottom: 5%;
+  }
+
+  .backNext{
+    display: flex;
+    justify-content: center;
+  }

@@ -15,11 +15,13 @@
 	let audio2 = new Audio("audio/diner.mp3");
 	let audioClick = new Audio("audio/click.mp3");
 	let audioPig = new Audio("audio/oink.mp3");
+	let audiofemChef = new Audio("audio/femChef.mp3");
+	let audiomaleChef = new Audio("audio/maleChef.mp3");
 
     play.addEventListener("click", ()=>{
         audio.play();
 		audio2.play();
-		audio2.volume = 0.1;
+		audio2.volume = 0.4;
     })
     pause.addEventListener("click", ()=>{
         audio.pause();
@@ -43,15 +45,27 @@
         }   
     });
 
+	//variables for screen versions
+	const startingScreen = document.getElementById('startingScreen');
+	console.log(startingScreen);
+
+	//variables for chefs
+	const femChef = document.getElementById('femChef');
+	const maleChef = document.getElementById('maleChef');
+
+	//variables for buttons
+	const cancelBtn = document.getElementById('cancel');
+	const angryPigBtn = document.getElementById('angryPigBtn');
+	const pigBtn = document.getElementById('pigBtn');
+
+	//variables for game
 	const startGame = document.getElementById('startgame');
 	const food1 = document.querySelectorAll('#selection1 .dish');
 	const food2 = document.querySelectorAll('#selection2 .dish');
 	const gameText = document.getElementById('narrator');
 	const gameTutorial = document.getElementById('tutorial');
-	const cancelBtn = document.getElementById('cancel');
 	const meHungry = document.getElementById('meHungry');
-	const pigBtn = document.getElementById('pigBtn');
-	const angryPigBtn = document.getElementById('angryPigBtn');
+	const sirHammy = document.getElementById('sirHammy');
 	const gameControl = document.getElementById('gamecontrol');
 	const game = document.getElementById('game');
 	const score = document.getElementById('score');
@@ -87,27 +101,16 @@
 			gameData.choice[1] = selectedDish;
 		})
 	}
-		
-	
-	gameData.choice[1] = "waffles";
 
 	gameTutorial.addEventListener('click', function(){
-		 //play button sound effect
 		 audioClick.play();
 		 audioClick.volume = 0.7;
 	})
 
 	cancelBtn.addEventListener('click', function(){
-		//play button sound effect
 		audioClick.play();
 		audioClick.volume = 0.7;
     })
-
-//    roll.addEventListener('click', function(){
-// 	//play button sound effect
-// 	audioClick.play();
-// 	audioClick.volume = 0.7;
-// 	})
 
    pigBtn.addEventListener('mouseover', function(){
 		//play oink sound effect
@@ -118,29 +121,56 @@
 		pigBtn.className = 'hidden';
 		angryPigBtn.className ='showing';
 		meHungry.className = 'showing';
-	})
+	});
 
 	angryPigBtn.addEventListener('mouseout', function(){
 		pigBtn.className = 'showing';
 		angryPigBtn.className ='hidden';
 		meHungry.className = 'hidden';
+	});
+
+	femChef.addEventListener('mouseover', function(){
+		audiofemChef.play();
 	})
 
-	startGame.addEventListener('click', function () { //event listner for start button
+	maleChef.addEventListener('mouseover', function(){
+		audiomaleChef.play();
+	})
+
+	//event listner for start button
+	startGame.addEventListener('click', function () { 
         //play button sound effect
 		audioClick.play();
 		audioClick.volume = 0.7;
 
-
 		gameData.index = Math.round(Math.random());
-		startGame.innerHTML = '<button id="quit" class="showing"><span class="shadow"></span><span class="edge"></span><span class="front text">Quit Game</span></button>';
 
-		document.getElementById('quit').addEventListener('click', function () {
-			location.reload();
-			//play button sound effect
+		startingScreen.innerHTML = inputScreen; 
+
+		//JS for THE INPUT SCREEN
+		const nextBtn = document.getElementById('nextBtn');
+		const backBtn = document.getElementById('backBtn');
+
+		nextBtn.addEventListener("click", function(){
 			audioClick.play();
 			audioClick.volume = 0.7;
-			});
+
+		})
+
+		backBtn.addEventListener("click", function(){
+			audioClick.play();
+			audioClick.volume = 0.7; 
+			window.location.reload();
+		})
+
+		startGame.innerHTML = '<button id="quit" class="showing"><span class="shadow"></span><span class="edge"></span><span class="front text">Quit Game</span></button>';
+
+		// document.getElementById('quit').addEventListener('click', function () {
+		// 	location.reload();
+		// 	//play button sound effect
+		// 	audioClick.play();
+		// 	audioClick.volume = 0.7;
+		// 	});
 
 		// document.getElementById('quit').className = "hidden";
 		setUpTurn();
@@ -150,11 +180,11 @@
 		gameText.innerHTML = `<p>Roll the dice for <b>${gameData.players[gameData.index]}!</b></p>`;
 		gameText.style.fontSize = "2em";
 		actionArea.innerHTML = '<button id="roll"><span class="shadow"></span><span class="edge"></span><span class="front text">Start Cooking</span></button>';
-		document.getElementById('roll').addEventListener('click', function(){
+		// document.getElementById('roll').addEventListener('click', function(){
 
-			throwDice();
+		// 	throwDice();
 
-		});
+		// });
 	}
 
 	function throwDice(){
@@ -242,3 +272,6 @@
 		score.style.fontSize = "0.8rem";
 	}
 }());
+
+//HTML screen variables 
+const inputScreen = '<div class="hero"><h2>game of pig</h2><button id="playBtn"><i class="fas fa-music"></i></button><button id="pauseBtn"><i class="fas fa-pause"></i></button></div><img src="images/title.png" alt="Breakfast Edition title" id="header1" width="800" height="167"><h2 id="nameText">Enter Your Chef Names!</h2><div class="backNext"><div id="backBtn"><button id="tutorial" class="open" ><span class="shadow"></span><span class="edge"></span><span class="front text">BACK</span></button></div><div id="nextBtn"><button id="tutorial" class="open"><span class="shadow"></span><span class="edge"></span><span class="front text">NEXT</span></button></div></div><div class="characters"><div class="charInput" id="chef1-1"><h1>Chef 1 Name</h1><input type="text" name="text" class="input" placeholder="Type here..."><img src="images/chef1.png" alt="Chef 1" id="femChef"></div><div class="charInput" id="chef2-1"><h1>Chef 2 Name</h1><input type="text" name="text" class="input" placeholder="Type here..."><img src="images/chef2.png" alt="Chef 1" id="maleChef"></div></div>';
