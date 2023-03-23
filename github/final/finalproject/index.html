@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;500&family=Audiowide&family=Comic+Neue&family=EB+Garamond&family=Inter:wght@500&family=Libre+Barcode+39+Text&family=Nunito:wght@400;600&family=Oswald:wght@500&family=Poppins:wght@400;600&family=Press+Start+2P&family=Sniglet&family=VT323&family=Vast+Shadow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<script src="finalproject.js" defer></script>
+    <title>Game of Pig: Breakfast Edition</title>
+</head>
+<body>
+    <main>
+
+        <div class="card">
+            <div id="selectionScreen">
+                <div class="hero">
+                    <h2>game of pig</h2>
+                    <button id="playBtn"><i class="fas fa-music"></i></button>
+                    <button id="pauseBtn"><i class="fas fa-pause"></i></button>
+                </div>
+                <img src="images/title.png" alt="Breakfast Edition title" id="header1" width="800" height="167">
+                <div class="backNext2">
+                    <div id="backBtn">
+                       <button id="tutorial" class="open">
+                           <span class="shadow"></span>
+                           <span class="edge"></span>
+                           <span class="front text">QUIT</span>
+                       </button>
+                   </div>
+                   <div id="nextBtn">
+                       <button id="tutorial" class="open">
+                           <span class="shadow"></span>
+                           <span class="edge"></span>
+                           <span class="front text">NEXT</span>
+                       </button>
+                   </div>
+               </div>
+              
+               <div class="characters2">
+                   <div class="charInput2" id="chef1-2">
+                        <h2 id="selectText1">Chef ___, choose your <br>breakfast food</h2>
+                        <div id="selection1">
+                            <img src="images/frying-pan.png" alt="Frying pan icon" class="dish" id="pan1">
+                            <img src="images/waffle.png" alt="waffle icon" class="dish" id="waffle1">
+                            <img src="images/bacon.png" alt="Bacon icon" class="dish" id="bacon1">
+                        </div>
+                        <img src="images/chef1.png" alt="Chef 1" id="femChef" width="150" height="150">
+                   </div>
+                   <div class="charInput2" id="chef2-2">
+                    <h2 id="selectText1">Chef ___, choose your <br>breakfast food</h2>
+                        <div id="selection2">
+                            <img src="images/frying-pan.png" alt="Frying pan icon" class="dish">
+                            <img src="images/waffle.png" alt="waffle icon" class="dish">
+                            <img src="images/bacon.png" alt="Bacon icon" class="dish">
+                        </div>
+                       <img src="images/chef2.png" alt="Chef 1" id="maleChef" width="150" height="150">
+                   </div>   
+               </div>
+            </div>
+            <!-- <div id="inputScreen">
+                <div class="hero">
+                    <h2>game of pig</h2>
+                    <button id="playBtn"><i class="fas fa-music"></i></button>
+                    <button id="pauseBtn"><i class="fas fa-pause"></i></button>
+                </div>
+                <img src="images/title.png" alt="Breakfast Edition title" id="header1" width="800" height="167">
+                <h2 id="nameText">Enter Your Chef Names!</h2>
+                <div class="backNext">
+                     <div id="backBtn">
+                        <button id="tutorial" class="open">
+                            <span class="shadow"></span>
+                            <span class="edge"></span>
+                            <span class="front text">BACK</span>
+                        </button>
+                    </div>
+                    <div id="nextBtn">
+                        <button id="tutorial" class="open">
+                            <span class="shadow"></span>
+                            <span class="edge"></span>
+                            <span class="front text">NEXT</span>
+                        </button>
+                    </div>
+                </div>
+               
+                <div class="characters">
+                    <div class="charInput" id="chef1-1">
+                        <h1>Chef 1 Name</h1>
+                        <input type="text" name="text" class="input" placeholder="Type here...">
+                        <img src="images/chef1.png" alt="Chef 1" id="femChef">
+                    </div>
+                    <div class="charInput" id="chef2-1">
+                        <h1>Chef 2 Name</h1>
+                        <input type="text" name="text" class="input" placeholder="Type here...">
+                        <img src="images/chef2.png" alt="Chef 1" id="maleChef">
+                    </div>   
+                </div>
+            </div> -->
+            <!-- <div id="startingScreen">
+                <header>
+                    <div class="hero">
+                        <h2>game of pig</h2>
+                        <button id="playBtn"><i class="fas fa-music"></i></button>
+                        <button id="pauseBtn"><i class="fas fa-pause"></i></button>
+                    </div>
+                    <img src="images/title.png" alt="Breakfast Edition title" id="header1" width="800" height="167">
+                
+                    <div id="sirHammy">
+                        <p id="meHungry" class="hidden">Me Hungry!!</p>
+                        <img src="images/angryPig.png" alt="Angry Pig" id="angryPigBtn" class="hidden">
+                        <img src="images/pig.png" alt="Cartoon Pig" id="pigBtn" class="showing">
+                    </div>
+
+                    <div id="score"></div>
+
+                </header>
+                
+                <section id="overlay" class="hidden">
+                    <img src="images/tutorial.svg" alt = "Game Tutorial">
+                    <button id="cancel" class="close">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front text">CLOSE</span>
+                    </button>
+                </section>
+                <p id="narrator">It’s 11:00am and Sir Hammy is awfully hungry!<br> The first chef to feed him <b>30 dishes</b> gets the glory!</p> 
+                <div id="actions"></div>
+                <div class="buttons">
+                
+                    <div id="howto">
+                        <button id="tutorial" class="open">
+                            <span class="shadow"></span>
+                            <span class="edge"></span>
+                            <span class="front text">GAME RULES</span>
+                        </button>
+                    </div>
+                    
+
+                    <div id="gamecontrol">
+                        <button id="startgame">
+                            <span class="shadow"></span>
+                            <span class="edge"></span>
+                            <span class="front text">START</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="characters">
+                    <div class="charInput" id="chef1">
+                        <h1>Chef 1</h1>
+                        <img src="images/chef1.png" alt="Chef 1" id="femChef">
+                    </div>
+                    
+                
+                    <div class="charInput" id="chef2">
+                        <h1>Chef 2</h1>
+                        <img src="images/chef2.png" alt="Chef 2" id="maleChef">
+                    </div>
+                    
+                </div>
+            </div> -->
+
+            <div id="game"></div>
+
+        </div>
+
+    </main>
+</body>
+</html>
